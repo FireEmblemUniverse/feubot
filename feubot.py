@@ -11,6 +11,8 @@ bot = commands.Bot(command_prefix=['!', '>>', 'feubot '], description='this is f
 
 # bot = commands.Bot(command_prefix=['##', 'feubeta '], description='this is feubot beta.')
 
+#Set up in reverse order so that useful displays first, etc.
+
 @bot.event
 async def on_ready():
     print('Logged in as')
@@ -28,10 +30,8 @@ token = os.environ.get('TOKEN', default=None)
 if token is None:
     token = open('./token').read().replace('\n','')
 
-useful.setup(bot)
-memes.setup(bot)
 reactions.setup(bot)
+memes.setup(bot)
+useful.setup(bot)
 
 bot.run(token)
-
-

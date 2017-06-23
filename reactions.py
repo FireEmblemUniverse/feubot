@@ -9,6 +9,25 @@ class Reactions:
         self.bot = bot
 
     @bot.command()
+    async def spritans(self):
+        """REEE"""
+        await self.bot.say("muh")
+        await asyncio.sleep(1)
+        await self.bot.say("SPRITANS")
+        await asyncio.sleep(2)
+        await self.bot.say("***REEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE***")
+
+    @bot.command()
+    async def hector(self):
+        """judges you"""
+        await self.bot.upload("./hectorpc.png")
+
+    @bot.command()
+    async def fuckingincredible(self):
+    """fuckingincredible.png"""
+    await self.bot.say("http://i.imgur.com/yt4hXhJ.png")
+
+    @bot.command()
     async def ews(self):
         """disgusting list"""
         filenameslist = [os.path.splitext(f)[0] for f in os.listdir("./disgusting")]
@@ -37,28 +56,9 @@ class Reactions:
             await self.bot.upload("./disgusting/"+random.choice([a for a in ewlist.values()]))
 
     @bot.command()
-    async def fuckingincredible(self):
-        """fuckingincredible.png"""
-        await self.bot.say("http://i.imgur.com/yt4hXhJ.png")
-
-    @bot.command()
     async def crackers(self):
         """jumping boat monkeys!"""
         await self.bot.upload("./Holy_crackers.png")
-
-    @bot.command()
-    async def hector(self):
-        """judges you"""
-        await self.bot.upload("./hectorpc.png")
-
-    @bot.command()
-    async def spritans(self):
-        """REEE"""
-        await self.bot.say("muh")
-        await asyncio.sleep(1)
-        await self.bot.say("SPRITANS")
-        await asyncio.sleep(2)
-        await self.bot.say("***REEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE***")
 
 
 def setup(bot):
