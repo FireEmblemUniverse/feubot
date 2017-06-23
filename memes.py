@@ -141,9 +141,14 @@ class Memes:
 
     @bot.command()
     async def arch(self):
-    """do something with arch"""
-    direction = random.choice([":arrow_down:", ":arrow_up:"])
-    await self.bot.say(direction+" with <:arch_mini:230160993299202068>")
+        """do something with arch"""
+        toDo = random.choice([0,1,2])
+        if toDo is 0:
+            await self.bot.say("http://i.imgur.com/dduEffC.gifv")
+        elif toDo is 1:
+            await self.bot.say(":arrow_down: with <:arch_mini:230160993299202068>")
+        elif toDo is 2:
+            await self.bot.say(":arrow_up: with <:arch_mini:230160993299202068>")
 
 
 def setup(bot):
