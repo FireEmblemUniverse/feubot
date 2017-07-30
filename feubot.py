@@ -6,12 +6,12 @@ import random
 import os
 from sys import argv
 
-import helpful, memes, reactions
+import helpful, memes, reactions, undelete
 from feubotFormatter import FeubotFormatter
 
 if __name__ == "__main__":
     if "--debug" in argv:
-        bot = commands.Bot(command_prefix=['##', 'feubeta '], description='this is feubot beta.', formatter = FeubotFormatter()) 
+        bot = commands.Bot(command_prefix=['##', 'feubeta '], description='this is feubot beta.', formatter = FeubotFormatter())
     else:
         bot = commands.Bot(command_prefix=['!', '>>', 'feubot '], description='this is feubot.', formatter = FeubotFormatter())
 
@@ -22,6 +22,10 @@ if __name__ == "__main__":
         print(bot.user.id)
         print('------')
         await bot.change_presence(game=discord.Game(name="Reading the doc!"))
+
+    @bot.event
+    async def on_message_delete(msg):
+        undelete.cache(msg)
 
     @bot.command()
     async def donate():
@@ -35,7 +39,7 @@ if __name__ == "__main__":
     reactions.setup(bot)
     memes.setup(bot)
     helpful.setup(bot)
+    undelete.setup(bot)
 
     bot.run(token)
-
 
