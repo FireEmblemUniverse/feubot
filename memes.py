@@ -29,6 +29,11 @@ class Memes:
     async def writing(self):
         """get it in writing. in blood."""
         await self.bot.upload("Pelleass_Blood_Pact.png")
+        
+    @bot.command()
+    async def room(self):
+        """This is the wrong room."""
+        await self.bot.upload("WrongRoom.png")
 
     @bot.command(aliases=["wtf"])
     async def wtfdyjfsamylb(self):
