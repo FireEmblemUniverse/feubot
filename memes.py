@@ -34,6 +34,11 @@ class Memes:
     async def room(self):
         """This is the wrong room."""
         await self.bot.upload("WrongRoom.png")
+        
+    @bot.command()
+    async def gotobed(self)
+        """go to bed"""
+        await self.bot.upload("GoToBed.png")
 
     @bot.command(aliases=["wtf"])
     async def wtfdyjfsamylb(self):
