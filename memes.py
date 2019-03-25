@@ -129,6 +129,7 @@ What the fuck did you just fucking say about me, you little bitch? I’ll have y
                 return
             elif (lord.lower() in ['bm', 'blackmage', 'black mage']):
                 await self.bot.upload("BMis.gif")
+                return
             elif lord[0].lower() in 'bcdfghjklmnpqrstvwxz':
                 blord = 'b'+lord[1:]
             else:
