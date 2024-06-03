@@ -100,11 +100,11 @@ class Helpful(bot.Cog):
         # embed.set_thumbnail(url='http://i.imgur.com/Bg5NSga.png')
         await ctx.send(embed=embed)
 
-    @bot.command() # removed aliases=["repo"]
-    async def repository(self, ctx):
-        """graphics for you"""
-        embed=discord.Embed(title="Emblem Anims", url='https://emblem-anims.herokuapp.com/', description="Get your animations here (credits missing on some, check just in case!)", color=0x4286f4)
-        await ctx.send(embed=embed)
+    # @bot.command() # removed aliases=["repo"]
+    # async def repository(self, ctx):
+    #     """graphics for you"""
+    #     embed=discord.Embed(title="Emblem Anims", url='https://emblem-anims.herokuapp.com/', description="Get your animations here (credits missing on some, check just in case!)", color=0x4286f4)
+    #     await ctx.send(embed=embed)
 
     @bot.command()
     async def mugs(self, ctx):
